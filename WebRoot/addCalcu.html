@@ -1,0 +1,233 @@
+<!DOCTYPE HTML> 
+<html> 
+<head>
+<meta http-equiv="Content-Type"; content="text/html; charset=utf-8"> 
+<title>Interest Calculate System</title> 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/addCalcu.js"></script> 
+<link href="css/ics.css" rel="stylesheet" type="text/css" />
+<style>
+html{
+	font-family:"微软雅黑", san serif;
+	font-color:#1A1A1A;
+	}
+body{
+	font-size:2rem;
+	margin:0;
+	padding:0;
+	overflow-y:scroll;
+	background-color:#DEDEDE;
+	}
+#data{
+	width:65%;
+	margin-left:40%;
+	margin:auto; 
+	padding:0px 20px 10px 20px;
+	float:right;
+	background-color:#FFFFF7;
+	border:2px solid #63BD84;
+	border-top:0px;
+	}
+#input{
+	position:fixed;
+	top:5%;
+	left:5%;
+<<<<<<< HEAD
+	width:15rem;
+=======
+	width:17rem;
+>>>>>>> 4e221dbaf5ea7774744169dec0adec85a83ace05
+	height:30rem;
+	background-color:#FFFFFF;
+	padding:1.5rem;
+	border:2px solid #F3843E; 
+}
+input{
+	height:1rem;
+	margin-bottom:0.8rem;
+	width:9rem;
+}
+select{
+	height:1.4rem;
+	margin-bottom:0.8rem;
+	width:9rem;
+}
+.init{
+	font-family:"微软雅黑";
+	font-size:0.8rem;
+	color:#1A1A1A;
+}
+<<<<<<< HEAD
+
+=======
+.button-init{
+	height:2rem !important;
+	background-color:#FF5A09;
+	color:#F1F1F1;
+	border:0px;
+	margin-right:2rem;
+	width:5rem;
+}
+>>>>>>> 4e221dbaf5ea7774744169dec0adec85a83ace05
+#datatable{
+	font-size:0.8rem;
+	border:0px solid #63BD84;
+	border-collapse:collapse;
+	border-spacing:0;
+	text-align:center;
+}
+#datatable th,#datatable tr,#datatable td{
+	width:10rem;
+	line-height:2rem;
+	border:1px solid #63BD84;
+	padding:0px;
+}
+#title{
+	background-color:#BCE2CB;
+	font-weight:bold;
+	line-height:2rem;
+}
+<<<<<<< HEAD
+.button-init{
+	height:2rem !important;
+	background-color:#FF5A09;
+	color:#F1F1F1;
+	border:0px;
+	margin-right:2rem;
+	width:5rem;
+}
+=======
+>>>>>>> 4e221dbaf5ea7774744169dec0adec85a83ace05
+.button-on{
+	height:2rem !important;
+	background-color:#F1F1F1;
+	color:#FF5A09;
+	border:0px;
+	margin-right:2rem;
+	width:5rem;
+}
+<<<<<<< HEAD
+.saveButton-init{
+	height:2rem !important;
+	background-color:#63BD84;
+	color:#FFFFFF;
+	border:0px;
+	margin-top:1rem;
+	width:5rem;
+}
+.saveButton-on{
+	height:2rem !important;
+	background-color:#F1F1F1;
+	color:#63BD84;
+	border:0px;
+	margin-top:1rem;
+	width:5rem;
+}
+=======
+>>>>>>> 4e221dbaf5ea7774744169dec0adec85a83ace05
+input:read-only{
+	color:#333;
+	font-weight:bold;
+	border:0px;
+	font-size:1rem;
+}
+
+#putTitle{
+	color:#F3843E;
+	font-weight:bold;
+	font-size:1.5rem;
+}
+<<<<<<< HEAD
+
+.alertCaseBg{
+	position:fixed;
+	_position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background:#000;
+	opacity:0.9;
+	-moz-opacity:0.9;
+	filter:alpha(opacity=70);
+	z-index:97;
+}
+.alertCaseDivBorder{
+	position:fixed;
+	_position:absolute;
+	width:32rem;
+	height:16rem;
+	left:50%;
+	top:50%;
+	margin:-8rem 0 0 -16rem;
+	background:#63BD84;
+	filter:alpha(opacity=30);
+	-moz-opacity:1;
+	opacity:1;
+	z-index:98;
+}
+.alertCaseDiv{
+	position:fixed;
+	_position:absolute;
+	width:31rem;
+	height:15rem;
+	left:50%;
+	top:50%;
+	margin:-7.5rem 0 0 -15.5rem;
+	background:#fff;
+	z-index:99;
+}
+.caseDiv{ 
+	position:absolute;
+	left:8rem;
+	top:5rem;
+}
+</style>
+</head>
+<body onbeforeunload="initRem();">
+<div class="alertCaseBg"></div>
+<div class="alertCaseDivBorder"></div>
+<div class="alertCaseDiv init">
+	<div class="caseDiv">
+	<label for="inpuCaseNo"><b>请输入案件号：</b></label><input class="init" type="text" id="inpuCaseNo" autofocus="ture" ><br/><br/>
+	<input type="button" id="getCaseNo" class="init button-init" value="确认" onclick="getCaseNo()"></input>
+	<a href="ics.html"><input type="button" id="back" class="init button-init" value="取消"></input></a>
+	</div>
+</div>
+<div class="init" id="input">
+	<label>案件号：</label>
+	<input type="text" id="caseNo" name="caseNo" readonly="readonly" value=""></input>
+	<p id="putTitle">请输入信息：</p><br/>
+	<form id="send">
+=======
+</style>
+</head>
+<body onbeforeunload="initRem();">
+<div class="init" id="input">
+	<label>案件号：</label>
+	<input type="text" id="caseNo" name="caseNo" readonly="readonly" value="201603137728"></input>
+	<p id="putTitle">请输入信息：</p><br/>
+	<form id="send" onsubmit="return saveData();">
+>>>>>>> 4e221dbaf5ea7774744169dec0adec85a83ace05
+		<label for="startDate">起算日期：</label><input class="init" type="text" id="startDate" autofocus="ture" ><br/> 
+		<label for="endDate">截止日期：</label><input class="init" type="text" id="endDate" /><br/> 
+		<label for="rate">利率 	(%)：</label><input class="init" type="text" id="rate" /><br/>
+		<label for="rateType">利率类型：</label><select id="rateType" class="init">
+			<option class="init" value="rateFourTime">四倍同期利率(%)</option>
+			<option class="init" value="rateByYear">年利率(%)</option> 
+			<option class="init" value="rateByMonth">月利率(%)</option></select><br/>		
+		<label for="principal">本金 (元)：</label><input class="init" type="text" id="principal" ><br/> 
+		<label for="repayment">还款 (元)：</label><input class="init" type="text" id="repayment"><br/> <br/> 
+<<<<<<< HEAD
+		<input class="init button-init" id="addButton" type="button" value="新增行" onclick="addLine()" /> <input class="init button-init" id="reset" type="reset" value="重置"/><br />
+		<input class="init saveButton-init" id="saveutton" type="button" value="保存计算" onclick="saveCal()"/>
+=======
+		<input class="init button-init" type="button" value="新增行" onclick="addLine()"/> <input class="init button-init" type="reset" value="重置"/>
+>>>>>>> 4e221dbaf5ea7774744169dec0adec85a83ace05
+	</form>
+</div>
+<div id="data">
+	<table id="datatable" style="margin-top:1rem;"></table>
+</div>
+</body>
+</html>

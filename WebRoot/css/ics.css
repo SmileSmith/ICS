@@ -1,0 +1,85 @@
+@charset "utf-8";
+html{
+	font-family:"微软雅黑", san serif;
+	font-color:#1A1A1A;
+	}
+body{
+	font-size:2rem;
+	margin:0;
+	padding:0;
+	overflow-y:scroll;
+	background-color:#FFFFF7;
+	}
+#center{
+	width:80%;
+	margin:auto; 
+	padding:0px 40px 10px 40px;
+	}
+#optionSearch{
+	position:fixed;
+	left:20%; 
+	bottom:70%;
+	width:100%;
+}
+.search-init{
+	height:2rem;
+	width:40%;
+}	
+.init{
+	font-family:"微软雅黑";
+	font-size:1rem;
+	font-color:#1A1A1A;
+}
+.option1{
+	position:fixed;
+	bottom:82%;
+	left:20%;
+	height:5rem;
+}
+.option2{
+	position:fixed;
+	bottom:60%;
+	left:20%;
+}
+#casetable{
+	position:fixed;
+	top:50%;
+	left:20%;
+	line-height:1rem;
+	border-collapse:collapse;
+	border-spacing:0;
+	text-align:center;
+}
+#casetable th,#casetable tr,#casetable td{
+	width:9.5rem;
+	line-height:1.8rem;
+	border:2px solid #63BD84;
+	padding:0px;
+}
+th{
+	background-color:#BCE2CB;
+	color:#393939;
+}
+.button-init{
+	height:2rem;
+	background-color:#63BD84;
+	color:#F1F1F1;
+	border:0px;
+	width:5rem; 
+	margin-right:3rem;
+}
+.button-on{
+	height:2rem;
+	background-color:#F1F1F1;
+	color:#63BD84;
+	border:0px;
+	width:5rem; 
+	margin-right:3rem;
+}
+.button-operatte{
+	width:50px; 
+	height:25px; 
+	background:#D0D3D5; 
+	font-size:14px; 
+	color:#FFF;"
+}

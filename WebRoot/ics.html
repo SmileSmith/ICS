@@ -1,0 +1,37 @@
+<!DOCTYPE HTML> 
+<html> 
+<head>
+<meta http-equiv="Content-Type"; content="text/html; charset=utf-8"> 
+<title>Interest Calculate System</title> 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ics.js"></script> 
+<link href="css/ics.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body onbeforeunload="initRem();"> 
+<div id="center">
+<div class="option1 init">
+	<div style="font-size:3rem;color:#63BD84;font-weight:bold;">借贷结算</div>
+</div>
+<div class="option2 init">
+	<a href="addCalcu.html"><input type="button" id="newCal" class="init button-init" style="background-color:#EF9494;float:left;" value="新建计算"></input></a>
+	<input type="button" id="allRecord" class="init button-init" value="所有记录" onclick="findAllRecord('all');"></input>
+
+</div>
+
+<div id="optionSearch">
+<label style="font-size:1rem;color:#595959; line-height:0.8rem;">用案件号搜索历史计算： </label><br />
+<input type="search" class="init search-init" placeholder=" Case No. ..." id="caseId" name="caseId" >
+
+<input type="button" id="search" class="init button-init" style="width:5rem;" value="搜  索" onclick="findAllRecord('one');">
+</div>
+
+<table id="casetable" class="init"><tr id="findtotal"><th>序号</th><th style = "display:none">计算编号</th><th>案件号</th><th>计算日期</th><th>计算结果</th><th>操作</th></tr>
+</table>
+
+
+<input type="button" id="search" class="init button-init" style="width:5rem;" value="搜  索" onclick="findRecordByCaseNo();">
+</div>
+
+</body>
+</html>
