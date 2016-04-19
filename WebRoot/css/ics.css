@@ -7,19 +7,38 @@ body{
 	font-size:2rem;
 	margin:0;
 	padding:0;
-	overflow-y:scroll;
+ 	overflow-y:scroll; 
 	background-color:#FFFFF7;
 	}
 #center{
 	width:80%;
 	margin:auto; 
 	padding:0px 40px 10px 40px;
-	}
+	}	
 #optionSearch{
-	position:fixed;
+	position:absolute;
 	left:20%; 
-	bottom:70%;
-	width:100%;
+	top:7rem;
+}
+.option1{
+	position:absolute;
+	top:2rem;
+	left:20%;
+	height:5rem;
+}
+.option2{
+	position:absolute;
+	top:14rem;
+	left:20%;
+}
+#casetable{
+	position:absolute;
+	top:18rem;
+	left:20%;
+	line-height:1rem;
+	border-collapse:collapse;
+	border-spacing:0;
+	text-align:center;
 }
 .search-init{
 	height:2rem;
@@ -29,36 +48,6 @@ body{
 	font-family:"微软雅黑";
 	font-size:1rem;
 	font-color:#1A1A1A;
-}
-.option1{
-	position:fixed;
-	bottom:82%;
-	left:20%;
-	height:5rem;
-}
-.option2{
-	position:fixed;
-	bottom:60%;
-	left:20%;
-}
-#casetable{
-	position:fixed;
-	top:50%;
-	left:20%;
-	line-height:1rem;
-	border-collapse:collapse;
-	border-spacing:0;
-	text-align:center;
-}
-#casetable th,#casetable tr,#casetable td{
-	width:9.5rem;
-	line-height:1.8rem;
-	border:2px solid #63BD84;
-	padding:0px;
-}
-th{
-	background-color:#BCE2CB;
-	color:#393939;
 }
 .button-init{
 	height:2rem;
@@ -76,10 +65,18 @@ th{
 	width:5rem; 
 	margin-right:3rem;
 }
-.button-operatte{
-	width:50px; 
-	height:25px; 
-	background:#D0D3D5; 
-	font-size:14px; 
-	color:#FFF;"
+
+input[type=search]{
+	width:30rem;
+}
+
+#casetable th,#casetable tr,#casetable td{
+	width:9.5rem;
+	line-height:1.8rem;
+	border:2px solid #63BD84;
+	padding:0px;
+}
+th{
+	background-color:#BCE2CB;
+	color:#393939;
 }

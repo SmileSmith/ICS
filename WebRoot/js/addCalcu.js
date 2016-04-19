@@ -3,17 +3,12 @@ $(function(){
 	initRem();
 	init();
 	tableTr();
-<<<<<<< HEAD
-=======
-	addLine();
->>>>>>> 4e221dbaf5ea7774744169dec0adec85a83ace05
 });
 window.onresize = init();
 
 function init(){
 	
 	window.onresize = function(){
-<<<<<<< HEAD
 		initRem();		
 	}
 	//按钮样式切换
@@ -32,11 +27,6 @@ function init(){
 	}).bind("mouseout",function(){
 		$(this).removeClass("saveButton-on");
 	});		
-=======
-		initRem();	
-	}
-	
->>>>>>> 4e221dbaf5ea7774744169dec0adec85a83ace05
 }
 function initRem(){
 		document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth/80 + 'px';	
@@ -85,7 +75,6 @@ function addLine(){
 	}
 	datatable.appendChild(tr);	
 }
-<<<<<<< HEAD
 
 function getCaseNo(){
 	$('#caseNo').val($('#inpuCaseNo').val());
@@ -94,5 +83,3 @@ function getCaseNo(){
 function saveCal(){
 	//TODO
 }
-=======
->>>>>>> 4e221dbaf5ea7774744169dec0adec85a83ace05

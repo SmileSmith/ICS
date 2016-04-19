@@ -13,12 +13,8 @@ function init(){
 	
 	window.onresize = function(){
 		initRem();	
-<<<<<<< HEAD
 	};
-=======
-	}
->>>>>>> 4e221dbaf5ea7774744169dec0adec85a83ace05
-	
+
 	//按钮样式切换
 	$('#search').bind("mouseover ",function(){
 		$(this).addClass("button-on");
@@ -43,6 +39,25 @@ function initRem(){
 		$('html')[0].style.fontSize = window.innerWidth/80 + 'px';	
 }
 
+function initTableTh(){
+	debugger
+	var $datatable = $("#casetable");
+	var tr = document.createElement('tr');
+	var th=[];
+	tr.id="title";
+	for(i=0;i<5;i++){
+		th[i]=document.createElement('th');
+	}
+	th[0].innerHTML="序号";
+	th[1].innerHTML="案件号";
+	th[2].innerHTML="计算日期";
+	th[3].innerHTML="计算结果";
+	th[4].innerHTML="操作";
+	for(i=0;i<5;i++){
+		tr.appendChild(th[i]);
+	}
+	$datatable.get(0).appendChild(tr);
+}
 function addLine(no,calId,caseNo,arrearage,updateDate){
 	var $datatable = $("#casetable");
 	
@@ -81,7 +96,9 @@ function findAllRecord(type){
 	debugger;
 	
 	//初始化清空表格数据
-	$("tr:not('#findtotal')").remove();
+	$("tr").remove();
+	//初始化表头
+	initTableTh();
 	
 	//需要搜索的案件ID，查询全部时为空
 	var searchCaseID = null;
@@ -141,7 +158,7 @@ function deleleCaseByCalId(calId){
 		
 	}
 };
-}
+
 
 
 
