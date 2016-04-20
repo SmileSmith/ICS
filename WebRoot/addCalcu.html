@@ -1,7 +1,7 @@
 <!DOCTYPE HTML> 
 <html> 
 <head>
-<meta http-equiv="Content-Type"; content="text/html; charset=utf-8"> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <title>Interest Calculate System</title> 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/addCalcu.js"></script> 
@@ -176,17 +176,20 @@ input:read-only{
 	<label>案件号：</label>
 	<input type="text" id="caseNo" name="caseNo" readonly="readonly" value=""></input>
 	<p id="putTitle">请输入信息：</p><br/>
-	<form id="send" onsubmit="return saveData();">
-		<label for="startDate">起算日期：</label><input class="init" type="text" id="startDate" autofocus="ture" ><br/> 
-		<label for="endDate">截止日期：</label><input class="init" type="text" id="endDate" /><br/> 
+	<form id="send" >
+		<label for="startDate">起算日期：</label><input class="init" type="text" id="startDate" autofocus="ture" onchange="countDays()"><br/> 
+		<label for="endDate">截止日期：</label><input class="init" type="text" id="endDate" onchange="countDays()"/><br/> 
+		<label for="days">天&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数：</label><input class="init" type="text" id="days" /><br/> 
 		<label for="rate">利率 	(%)：</label><input class="init" type="text" id="rate" /><br/>
 		<label for="rateType">利率类型：</label><select id="rateType" class="init">
 			<option class="init" value="rateFourTime">四倍同期利率(%)</option>
 			<option class="init" value="rateByYear">年利率(%)</option> 
 			<option class="init" value="rateByMonth">月利率(%)</option></select><br/>		
 		<label for="principal">本金 (元)：</label><input class="init" type="text" id="principal" ><br/> 
-		<label for="repayment">还款 (元)：</label><input class="init" type="text" id="repayment"><br/> <br/> 
-		<input class="init button-init" id="addButton" type="button" value="新增行" onclick="addLine()" /> <input class="init button-init" id="reset" type="reset" value="重置"/><br />
+		<label for="repayment">还款 (元)：</label><input class="init" type="text" id="repayment"><br/>
+		<input class="init" type="hidden" id="relLineId"> <br/> 
+		<input class="init button-init" id="addButton" type="button" value="新增行" onclick="countData()" /> 
+		<input class="init button-init" id="reset" type="reset" value="重置"/><br />
 		<input class="init saveButton-init" id="saveutton" type="button" value="保存计算" onclick="saveCal()"/>
 	</form>
 </div>
