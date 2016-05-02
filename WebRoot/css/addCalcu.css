@@ -1,0 +1,206 @@
+@charset "utf-8";
+html{
+	font-family:"微软雅黑", san serif;
+	font-color:#1A1A1A;
+	}
+body{
+	font-size:2rem;
+	margin:0;
+	padding:0;
+	overflow-y:scroll;
+	background-color:#FFFFFA;
+	}
+#data{
+	margin-left:18rem;
+	text-align:center;
+	}
+.dataAllScreen{
+	margin: 0 auto !important; 
+}
+#input{
+	position:fixed;
+	top:0;
+	left:0;
+	width:14rem;
+	height:100%;
+	background-color:#FFFFFF;
+	padding:1rem;
+	border-right:2px solid #F3843E; 
+}
+#send label{
+	width:4rem;
+}
+input{
+	height:1rem;
+	margin-bottom:0.8rem;
+	width:9rem;
+}
+#send{
+	position:fixed;
+	top:8rem;
+	left:1.5rem;
+}
+#caseNoLabel{
+	position:fixed;
+	top:2rem;
+	left:1.5rem;
+}
+
+#showButton{
+	position:fixed;
+	top:80%;
+	left:0rem;
+	background-color:#FF5A09;
+	color:#FFFFFF;
+}
+
+select{
+	height:1.4rem;
+	margin-bottom:0.8rem;
+	width:9rem;
+}
+.init{
+	font-family:"微软雅黑";
+	font-size:0.8rem;
+	color:#1A1A1A;
+}
+
+#dataTable{
+	font-size:0.7rem;
+	line-height:1.2rem;
+	border:0px solid #63BD84;
+	border-collapse:collapse;
+	border-spacing:0;
+	text-align:center;
+	margin:0 auto;
+}
+
+#dataTable th,#dataTable tr,#dataTable td{
+	border:1px solid #63BD84;
+	padding:3px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.inputLine{
+	background-color:#FFFFFF;
+	color:#393939;
+	border:2px solid #63BD84 !important;
+	font-weight:bold;
+}
+th{
+	background-color:#BCE2CB;
+	color:#393939;
+}
+#title{
+	background-color:#BCE2CB;
+	font-weight:bold;
+	line-height:1rem;
+}
+.button-init{
+	height:2rem !important;
+	background-color:#FF5A09;
+	color:#F1F1F1;
+	border:0px;
+	margin-right:1rem;
+	width:5rem;
+}
+.button-on{
+	height:2rem !important;
+	background-color:#F1F1F1;
+	color:#FF5A09;
+	border:0px;
+	margin-right:1rem;
+	width:5rem;
+}
+.saveButton-init{
+	height:2rem !important;
+	background-color:#63BD84;
+	color:#FFFFFF;
+	border:0px;
+	margin-top:1rem;
+	width:5rem;
+}
+.saveButton-on{
+	height:2rem !important;
+	background-color:#F1F1F1;
+	color:#63BD84;
+	border:0px;
+	margin-top:1rem;
+	width:5rem;
+}
+input:read-only{
+	color:#333;
+	font-weight:bold;
+	border:0px;
+	font-size:1rem;
+}
+
+#putTitle{
+	color:#F3843E;
+	font-weight:bold;
+	font-size:1.5rem;
+	line-height:3rem;
+}
+
+.alertCaseBg{
+	position:fixed;
+	_position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background:#000;
+	opacity:0.9;
+	-moz-opacity:0.9;
+	filter:alpha(opacity=70);
+	z-index:97;
+}
+.alertCaseDivBorder{
+	position:fixed;
+	width:32rem;
+	height:16rem;
+	left:50%;
+	top:50%;
+	margin:-8rem 0 0 -16rem;
+	background:#63BD84;
+	filter:alpha(opacity=30);
+	-moz-opacity:1;
+	opacity:1;
+	z-index:98;
+}
+.alertCaseDiv{
+	position:fixed;
+	width:31rem;
+	height:15rem;
+	left:50%;
+	top:50%;
+	margin:-7.5rem 0 0 -15.5rem;
+	background:#fff;
+	z-index:99;
+}
+.caseDiv{ 
+	position:relative;
+	left:8rem;
+	top:5rem;
+}
+
+.sequence, .days{
+	width:2.5rem !important;
+}
+.rate{
+	width:6rem !important;
+}
+
+.startDate,.endDate{
+	width:4.5rem !important;
+}
+.operation{
+	width:5rem !important;
+}
+.principal,.repayment,.interest,.intRepay,.priRepay,.intResidual,.priResidual{
+	width:5.5rem !important;
+}
+.thAllScreen{
+	width:6rem !important;
+}

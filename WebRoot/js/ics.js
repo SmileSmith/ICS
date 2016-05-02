@@ -40,30 +40,33 @@ function initRem(){
 }
 
 function initTableTh(){
-	debugger
 	var $datatable = $("#casetable");
 	var tr = document.createElement('tr');
 	var th=[];
 	tr.id="title";
-	for(i=0;i<5;i++){
+	for(var i=0;i<5;i++){
 		th[i]=document.createElement('th');
 	}
 	th[0].innerHTML="序号";
 	th[1].innerHTML="案件号";
-	th[2].innerHTML="计算日期";
-	th[3].innerHTML="计算结果";
+	th[2].innerHTML="计算结果";
+	th[3].innerHTML="计算日期";
 	th[4].innerHTML="操作";
-	for(i=0;i<5;i++){
+	for(var i=0;i<5;i++){
 		tr.appendChild(th[i]);
 	}
 	$datatable.get(0).appendChild(tr);
 }
+
 function addLine(no,calId,caseNo,arrearage,updateDate){
 	var $datatable = $("#casetable");
 	
 	var tr = document.createElement('tr');
 	var td = [];
-
+    var a = document.createElement('a');
+	a.setAttribute("href", "http://localhost:8080/ICS/addCalcu.html?calId="+calId+"&caseNo="+caseNo);
+    a.innerHTML = caseNo;
+    
 	for(var i=0;i<6;i++){
 		td[i]=document.createElement('td');
 	}
@@ -71,7 +74,7 @@ function addLine(no,calId,caseNo,arrearage,updateDate){
 	td[1].style.display = "none";
 	td[1].setAttribute("id","calId");
 	td[1].setAttribute("value",calId);
-	td[2].innerHTML = caseNo;
+	td[2].appendChild(a);
 	td[3].innerHTML = arrearage;
 	td[4].innerHTML = updateDate;
 	var delBtn = document.createElement("input");
@@ -93,7 +96,6 @@ function addLine(no,calId,caseNo,arrearage,updateDate){
  * 根据要求查询出满足条件的所有行
  */
 function findAllRecord(type){
-	debugger;
 	
 	//初始化清空表格数据
 	$("tr").remove();

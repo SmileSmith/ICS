@@ -10,12 +10,21 @@ public class CalueLine {
 	 /**
 	 * 案件ID
 	 */
-	 private int calId; 
+	 private int calId;
 	 
+	 /**
+	  * 序号，对应表格序号
+	  */
+	 private int sequence;
+	 
+	 /**
+	  * 序号，对应表格行序号
+	  */
+	 private int index;
 	 /**
 	 * 关联ID
 	 */
-	 private int relLineId;   
+	 private int prilineid; 
 	 
 	 /**
 	 * 开始时间
@@ -30,15 +39,15 @@ public class CalueLine {
 	 /**
 	 * 本金
 	 */
-	 private Long principal;
+	 private double principal;
 	 
 	 /**
-	 * 利息
+	 * 利率
 	 */
-	 private Long interestRate; 
+	 private double rate;
 	 
 	 /**
-	 * 汇率类型 1:四倍同期利率; 2:年利率;3: 月利率;4:天利率
+	 * 利率类型 1:四倍同期利率; 2:年利率;3: 月利率;4:天利率
 	 */
 	 private String rateType;
 	 
@@ -50,32 +59,32 @@ public class CalueLine {
 	 /**
 	 * 利息
 	 */
-	 private Long interest;
+	 private double interest;
 	 
 	 /**
 	 * 还款
 	 */
-	 private Long repayment;
+	 private double repayment;
 	 
 	 /**
 	 * 还款抵扣利息
 	 */
-	 private Long intRepay;
+	 private double intRepay;
 	 
 	 /**
 	 * 还款抵扣本金
 	 */
-	 private Long priRepay;
-	 
-	 /**
-	 * 剩余本金
-	 */
-	 private Long intResidual;
+	 private double priRepay;
 	 
 	 /**
 	 * 未偿还利息
 	 */
-	 private Long payResidual;
+	 private double intResidual;
+	 
+	 /**
+	 * 剩余本金
+	 */
+	 private double priResidual;
 	 
 	 
 	public int getLineId() {
@@ -90,11 +99,24 @@ public class CalueLine {
 	public void setCalId(int calId) {
 		this.calId = calId;
 	}
-	public int getRelLineId() {
-		return relLineId;
+	public int getSequence() {
+		return sequence;
 	}
-	public void setRelLineId(int relLineId) {
-		this.relLineId = relLineId;
+	public void setSequence(int sequence) {
+		this.sequence = sequence;
+	}
+	public int getIndex() {
+		return index;
+	}
+	public void setIndex(int index) {
+		this.index = index;
+	}
+	
+	public int getPrilineid() {
+		return prilineid;
+	}
+	public void setPrilineid(int prilineid) {
+		this.prilineid = prilineid;
 	}
 	public String getStartDate() {
 		return startDate;
@@ -108,17 +130,11 @@ public class CalueLine {
 	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
-	public Long getPrincipal() {
+	public double getPrincipal() {
 		return principal;
 	}
-	public void setPrincipal(Long principal) {
+	public void setPrincipal(double principal) {
 		this.principal = principal;
-	}
-	public Long getInterestRate() {
-		return interestRate;
-	}
-	public void setInterestRate(Long interestRate) {
-		this.interestRate = interestRate;
 	}
 	public String getRateType() {
 		return rateType;
@@ -126,47 +142,53 @@ public class CalueLine {
 	public void setRateType(String rateType) {
 		this.rateType = rateType;
 	}
+	public double getRate() {
+		return rate;
+	}
+	public void setRate(double rate) {
+		this.rate = rate;
+	}
 	public int getDays() {
 		return days;
 	}
 	public void setDays(int days) {
 		this.days = days;
 	}
-	public Long getInterest() {
+	public double getInterest() {
 		return interest;
 	}
-	public void setInterest(Long interest) {
+	public void setInterest(double interest) {
 		this.interest = interest;
 	}
-	public Long getRepayment() {
+	public double getRepayment() {
 		return repayment;
 	}
-	public void setRepayment(Long repayment) {
+	public void setRepayment(double repayment) {
 		this.repayment = repayment;
 	}
-	public Long getIntRepay() {
+	public double getIntRepay() {
 		return intRepay;
 	}
-	public void setIntRepay(Long intRepay) {
+	public void setIntRepay(double intRepay) {
 		this.intRepay = intRepay;
 	}
-	public Long getPriRepay() {
+	public double getPriRepay() {
 		return priRepay;
 	}
-	public void setPriRepay(Long priRepay) {
+	public void setPriRepay(double priRepay) {
 		this.priRepay = priRepay;
 	}
-	public Long getIntResidual() {
+	public double getIntResidual() {
 		return intResidual;
 	}
-	public void setIntResidual(Long intResidual) {
+	public void setIntResidual(double intResidual) {
 		this.intResidual = intResidual;
 	}
-	public Long getPayResidual() {
-		return payResidual;
+	public double getPriResidual() {
+		return priResidual;
 	}
-	public void setPayResidual(Long payResidual) {
-		this.payResidual = payResidual;
+	public void setPriResidual(double priResidual) {
+		this.priResidual = priResidual;
 	}
 	 
 }

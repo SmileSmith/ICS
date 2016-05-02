@@ -14,7 +14,7 @@ public class CaseCalue {
 	/**
 	 * 欠款汇总
 	 */
-	private long arrearage;
+	private Double arrearage;
 	
 	/**
 	 * 创建人
@@ -71,10 +71,10 @@ public class CaseCalue {
 	public void setUpdateDate(String updateDate) {
 		this.updateDate = updateDate;
 	}
-	public long getArrearage() {
+	public Double getArrearage() {
 		return arrearage;
 	}
-	public void setArrearage(long arrearage) {
+	public void setArrearage(Double arrearage) {
 		this.arrearage = arrearage;
 	}
 }

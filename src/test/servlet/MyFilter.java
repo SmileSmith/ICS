@@ -18,7 +18,6 @@ public class MyFilter implements Filter{
     }
  
     public void doFilter(ServletRequest srequest, ServletResponse sresponse, FilterChain chain) throws IOException, ServletException {
-        System.out.println("Calling MyFilter");
         HttpServletRequest request = (HttpServletRequest) srequest;
         request.setCharacterEncoding("UTF-8");
         chain.doFilter(srequest, sresponse);
