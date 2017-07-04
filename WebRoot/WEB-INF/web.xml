@@ -9,12 +9,7 @@
   	<listener-class>com.ics.dao.HsqldbContextListener</listener-class>
   </listener>
   
-  <!--配置一个Servlet类，并取名为httpprocesserservlet-->
-  <servlet>
-    <servlet-name>httpprocesserservlet</servlet-name>
-    <servlet-class>test.servlet.MyServlet</servlet-class>
-    <load-on-startup>2</load-on-startup>
-  </servlet>
+  <!--配置Servlet类-->
   <servlet>
     <servlet-name>CaseCalueServlet</servlet-name>
     <servlet-class>com.ics.servlet.CaseCalueServlet</servlet-class>
@@ -27,14 +22,24 @@
     <servlet-name>DelCaseCalueServlet</servlet-name>
     <servlet-class>com.ics.servlet.DelCaseCalueServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>FindCalueLineServlet</servlet-name>
+    <servlet-class>com.ics.servlet.FindCalueLineServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SaveCalueLineServlet</servlet-name>
+    <servlet-class>com.ics.servlet.SaveCalueLineServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OpeCalueLineServlet</servlet-name>
+    <servlet-class>com.ics.servlet.OpeCalueLineServlet</servlet-class>
+  </servlet>
 
 
-  <!--配置请求处理映射，就是前台通过什么样的路径请求通过这处理，这里就配置为前台页面中往后台提交时，
-  form的action为"httpprocesserservlet"时，通过测试的Servlet处理-->
-  <servlet-mapping>
-    <servlet-name>httpprocesserservlet</servlet-name>
-    <url-pattern>/httpprocesserservlet</url-pattern>
-  </servlet-mapping>
+
+
+
+  <!--配置请求处理映射-->
   <servlet-mapping>
     <servlet-name>CalueLineServlet</servlet-name>
     <url-pattern>/CalueLineServlet</url-pattern>
@@ -46,6 +51,18 @@
   <servlet-mapping>
     <servlet-name>DelCaseCalueServlet</servlet-name>
     <url-pattern>/DelCaseCalueServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindCalueLineServlet</servlet-name>
+    <url-pattern>/FindCalueLineServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SaveCalueLineServlet</servlet-name>
+    <url-pattern>/SaveCalueLineServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OpeCalueLineServlet</servlet-name>
+    <url-pattern>/OpeCalueLineServlet</url-pattern>
   </servlet-mapping>
   
   <filter>
